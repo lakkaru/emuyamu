@@ -1,0 +1,153 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.remaining-height {
+  height: calc(100vh - 100px); 
+}
+nav{
+  /* background-color: #001F3F; */
+  background-image: linear-gradient(#6d6d6e, #bcd7f3);
+}
+
+nav img {
+  width: 80px;
+}
+
+
+.nav-link {
+  /* color: rgb(221, 224, 16); */
+  /* box-shadow: 0 4px 8px rgba(12, 142, 175, 0.1), 0 6px 20px rgba(130, 139, 228, 0.1); */
+  font-weight: 500;
+  font-size: 1.5rem;
+  /* background-color: #3d57cc; */
+
+  /* border-radius: 0 0 15px 15px; */
+  /* background: linear-gradient(#80868e 90%, #0073e0 10%); */
+  
+  /* transition: .3s; */
+}
+
+.nav-link:hover {
+  color: #dcf4f5 !important;
+  border-bottom: #0073e0 3px solid;
+  /* animation: filler .2s ease; */
+  /* background: linear-gradient(#80868e 75%, #0073e0 25%); */
+ 
+}
+
+
+.navbar-nav .nav-item.active a{
+  color: #dcf4f5 !important;
+}
+
+
+#moving-car{
+position: absolute;
+top:33px;
+left: 14%;
+z-index: 1;
+
+/* height: 400px; */
+animation: move 5s linear infinite;
+
+
+}
+@keyframes move{
+  0%{
+    transform: translateX(0);
+  }
+  /* 40%{
+    transform: translateX(10rem) rotateY(0deg)
+  } */
+  49%{
+    transform: translateX(10rem) rotateY(0deg);
+  }
+  50%{
+    transform: translateX(10rem) rotateY(180deg);
+  }
+  99%{
+    transform: translateX(0) rotateY(180deg);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+#home {
+  /* width: 100%; */
+  /* height: 100vh; */
+  /* background-image: url("images/lakshman-karunasena-lakkaru.webp"); */
+  /* background-position: right; */
+  /* background-repeat: no-repeat; */
+  /* background-size: 23%; */
+}
+
+#header-right{
+  background-color: #00c954;
+  border: 15px rgb(255, 255, 196) solid;
+}
+#dl-nav {
+  display: inline-block;
+}
+#dl-head {
+  display: none;
+}
+.tab-content li span {
+  color: #00c954;
+}
+#membership-image img{
+  width: 120px ;
+}
+.followMe_link{
+  display: inline;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+@media (max-width: 425px) {
+  #home {
+    padding-top: 4rem;
+  }
+  #dl-nav {
+    display: none;
+  }
+  #dl-head {
+    display: inline-block;
+  }
+  header {
+    background-position: center top;
+    /* margin-bottom: 50%; */
+    /* margin-top:10px; */
+    background-size: 33%;
+  }
+  #header-text {
+    padding-bottom: 15px;
+  }
+  .card-deck {
+    width: 100%;
+    justify-content: center !important;
+  }
+  .carousel-item img{
+    width:75% !important;
+  }
+  #membership-image img{
+    width: 100px ;
+  }
+  
+}
+/* .carousel-caption{
+  display: none;
+  color: #00563F;
+  font-weight: 600;
+  font-size: 1.1em;
+} */
+/* .nav-link::after {
+  content: "";
+  width: 3%;
+  height: 3px;
+  background: #2bcd01;
+   left: 0; 
+  bottom: 12px;
+  position: absolute;
+} */
