@@ -1,110 +1,188 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+.logo {
+  width: 50px;
 }
 
 .remaining-height {
-  height: calc(100vh - 100px); 
+  height: calc(100vh - 100px);
 }
-nav{
-  /* background-color: #001F3F; */
-  background-image: linear-gradient(#6d6d6e, #bcd7f3);
+
+nav {
+  background: linear-gradient( #373738d8 , #bcd7f3 );
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav img {
   width: 80px;
 }
-
+#contact-number{
+  color:rgba(240, 236, 8, 0.774);
+  text-shadow:1px 1px 2px black; 
+}
 
 .nav-link {
-  /* color: rgb(221, 224, 16); */
-  /* box-shadow: 0 4px 8px rgba(12, 142, 175, 0.1), 0 6px 20px rgba(130, 139, 228, 0.1); */
   font-weight: 500;
-  font-size: 1.5rem;
-  /* background-color: #3d57cc; */
-
-  /* border-radius: 0 0 15px 15px; */
-  /* background: linear-gradient(#80868e 90%, #0073e0 10%); */
-  
-  /* transition: .3s; */
+  font-size: 1.1rem;
+  border-bottom: 3px solid transparent;
+  transition: color 0.3s, border-bottom 0.3s;
 }
 
 .nav-link:hover {
   color: #dcf4f5 !important;
-  border-bottom: #0073e0 3px solid;
-  /* animation: filler .2s ease; */
-  /* background: linear-gradient(#80868e 75%, #0073e0 25%); */
- 
+  border-bottom: 3px solid #0073e0;
 }
 
-
-.navbar-nav .nav-item.active a{
+/* .navbar-nav .nav-item.active a {
   color: #dcf4f5 !important;
+} */
+
+#moving-car {
+  position: absolute;
+  top: 25px;
+  left: 10%;
+  z-index: 1;
+  
+  animation: move 5s linear infinite;
 }
 
-
-#moving-car{
-position: absolute;
-top:33px;
-left: 14%;
-z-index: 1;
-
-/* height: 400px; */
-animation: move 5s linear infinite;
-
-
-}
-@keyframes move{
-  0%{
+@keyframes move {
+  0%, 100% {
     transform: translateX(0);
   }
-  /* 40%{
-    transform: translateX(10rem) rotateY(0deg)
-  } */
-  49%{
-    transform: translateX(10rem) rotateY(0deg);
+  49% {
+    transform: translateX(8rem) rotateY(0deg);
   }
-  50%{
-    transform: translateX(10rem) rotateY(180deg);
+  50% {
+    transform: translateX(8rem) rotateY(180deg);
   }
-  99%{
+  99% {
     transform: translateX(0) rotateY(180deg);
   }
-  100%{
-    transform: translateX(0);
+}
+
+#floting-contacts{
+  position: fixed;
+  z-index: -3;
+  /* left: calc(100vw - 75px); */
+  right: 0;
+  top:70vh;
+  width: 100px;
+}
+
+
+.svg-container{
+  position: relative;
+    width: 100%; /* Adjust width as needed */
+    max-width: 400px; /* Optional: Set a max width */
+    height: auto; /* This ensures the SVG scales proportionally */
+  
+}
+
+
+
+.svg-container svg {
+  /* Position the SVG absolutely within its container */
+  width: 100%; /* Ensure the SVG fills its container */
+  height: 100%; /* Ensure the SVG fills its container */
+  top: 0; /* Align the SVG to the top of its container */
+  right: 0; /* Align the SVG to the left of its container */
+}
+@media (max-width: 712px) {
+  #floting-contacts{
+    display: flex;
+    /* gap:; */
+    justify-content: space-between;
+    /* gap: 3; */
+    top:95vh;
+    padding: 0;
+    margin-right: 10px;
+  }
+  #floting-contacts div{
+    margin-left: 5px;
+  }
+  .svg-container{
+    width: 200%;
   }
 }
 
-#home {
-  /* width: 100%; */
-  /* height: 100vh; */
-  /* background-image: url("images/lakshman-karunasena-lakkaru.webp"); */
-  /* background-position: right; */
-  /* background-repeat: no-repeat; */
-  /* background-size: 23%; */
+
+header {
+  padding-top: 100px;
+}
+section{
+  padding-top: 100px;
 }
 
-#header-right{
-  background-color: #00c954;
-  border: 15px rgb(255, 255, 196) solid;
+header h1{
+  text-shadow:1px 1px 2px rgba(218, 187, 11, 0.966);
 }
-#dl-nav {
-  display: inline-block;
+
+header h2{
+  text-shadow:1px 1px 2px rgba(255, 255, 255, 0.274);
 }
-#dl-head {
-  display: none;
+.cta{
+  background-color: rgba(150, 128, 3, 0.966);
 }
-.tab-content li span {
-  color: #00c954;
+.cta:hover{
+  background-color: rgba(160, 137, 10, 0.747);
 }
-#membership-image img{
-  width: 120px ;
+#header-right {
+  border: 15px solid ;
+  border-color: #de781fa6;
+  background-image: url("./images/black\ car\ Photo\ by\ a\ href=httpsunsplash.com@mohit445utm_content=creditCopyText&utm_medium=referral&utm_source=unsplashmohit\ suthara\ on\ a\ href=httpsunsplash.comphotosgray-car-HTGczLjKhsEutm_content=creditC.webp");
+  background-size: cover;
+  position: relative;
+  border-radius:0 30%;
+  
 }
-.followMe_link{
-  display: inline;
-  font-family: sans-serif;
-  font-weight: 400;
+
+#header-right #light{
+  position: absolute;
+  border-style:  solid ;
+  
+  border-radius:10% 50%;
+  top: 464px;
+  left: 218px;
+  width: 20px;
+  height: 50px;
+  background-color: #cefafc;
+  transform: rotate(75deg);
+  /* transition: background-color 2s; */
+  animation: light-on 1s ease-out infinite forwards;
 }
+
+@keyframes light-on { 
+  0%{
+    background-color: #f09826;
+  }
+  50%{
+    background-color: #241706;
+  }
+  100%{
+    background-color: #f09826;
+  }
+  
+}
+
+
+
+
 @media (max-width: 425px) {
   #home {
     padding-top: 4rem;
@@ -117,8 +195,6 @@ animation: move 5s linear infinite;
   }
   header {
     background-position: center top;
-    /* margin-bottom: 50%; */
-    /* margin-top:10px; */
     background-size: 33%;
   }
   #header-text {
@@ -128,26 +204,10 @@ animation: move 5s linear infinite;
     width: 100%;
     justify-content: center !important;
   }
-  .carousel-item img{
-    width:75% !important;
+  .carousel-item img {
+    width: 75% !important;
   }
-  #membership-image img{
-    width: 100px ;
+  #membership-image img {
+    width: 100px;
   }
-  
 }
-/* .carousel-caption{
-  display: none;
-  color: #00563F;
-  font-weight: 600;
-  font-size: 1.1em;
-} */
-/* .nav-link::after {
-  content: "";
-  width: 3%;
-  height: 3px;
-  background: #2bcd01;
-   left: 0; 
-  bottom: 12px;
-  position: absolute;
-} */
