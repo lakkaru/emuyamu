@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+p{
+  margin: 0;
+  padding: 0;
+}
 
 body {
   position: relative;
@@ -78,7 +82,7 @@ nav img {
 
 #floting-contacts{
   position: fixed;
-  z-index: -3;
+  z-index: 2;
   /* left: calc(100vw - 75px); */
   right: 0;
   top:70vh;
@@ -137,7 +141,7 @@ header h2{
   text-shadow:1px 1px 2px rgba(255, 255, 255, 0.274);
 }
 .cta{
-  background-color: rgba(150, 128, 3, 0.966);
+  background-color: #dd781e;
 }
 .cta:hover{
   background-color: rgba(160, 137, 10, 0.747);
@@ -179,8 +183,48 @@ header h2{
   }
   
 }
+.city-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.center-city {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
+.destination-cities {
+  display: flex;
+}
+
+.destination-city {
+  padding: 10px 20px;
+  margin: 10px 10px;
+  /* width: 100%; */
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.vehicle-models{
+ /* width: inherit;  */
+ border-radius: 15px;
+ padding: 5px;
+  
+  background-color: #0073e0;
+}
+.vehicle-col{
+  display: flex;
+  flex-direction: column;
+  /* justify-items:flex-end; */
+}
+.vehicle-col img {
+  align-self: center;
+}
+.vehicle-col p {
+  text-align: center;
+}
 
 
 @media (max-width: 425px) {
