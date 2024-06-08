@@ -3,15 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
-p{
-  margin: 0;
-  padding: 0;
-}
+
 
 body {
   position: relative;
   background-color: #343a40;
   color: #f8f9fa;
+}
+p{
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
@@ -39,6 +40,10 @@ nav img {
   color:rgba(240, 236, 8, 0.774);
   text-shadow:1px 1px 2px black; 
 }
+.active {
+  color: #dcf4f5 !important;
+  /* border-bottom: 3px solid #0073e0; */
+}
 
 .nav-link {
   font-weight: 500;
@@ -52,48 +57,22 @@ nav img {
   border-bottom: 3px solid #0073e0;
 }
 
-/* .navbar-nav .nav-item.active a {
-  color: #dcf4f5 !important;
-} */
-
-#moving-car {
-  position: absolute;
-  top: 25px;
-  left: 10%;
-  z-index: 1;
-  
-  animation: move 5s linear infinite;
-}
-
-@keyframes move {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  49% {
-    transform: translateX(8rem) rotateY(0deg);
-  }
-  50% {
-    transform: translateX(8rem) rotateY(180deg);
-  }
-  99% {
-    transform: translateX(0) rotateY(180deg);
-  }
-}
 
 #floting-contacts{
   position: fixed;
   z-index: 2;
   /* left: calc(100vw - 75px); */
   right: 0;
-  top:70vh;
+  top:80vh;
   width: 100px;
+  display: none;
 }
 
 
 .svg-container{
   position: relative;
     width: 100%; /* Adjust width as needed */
-    max-width: 400px; /* Optional: Set a max width */
+    max-width: 35px; /* Optional: Set a max width */
     height: auto; /* This ensures the SVG scales proportionally */
   
 }
@@ -107,27 +86,28 @@ nav img {
   top: 0; /* Align the SVG to the top of its container */
   right: 0; /* Align the SVG to the left of its container */
 }
-@media (max-width: 712px) {
-  #floting-contacts{
-    display: flex;
+/* @media (max-width: 712px) { */
+  /* #floting-contacts{ */
+    /* display: flex; */
     /* gap:; */
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* gap: 3; */
-    top:95vh;
-    padding: 0;
-    margin-right: 10px;
-  }
-  #floting-contacts div{
-    margin-left: 5px;
-  }
-  .svg-container{
-    width: 200%;
-  }
-}
+    /* top:85vh; */
+    /* padding: 0; */
+    /* margin-right: 50px; */
+  /* } */
+  /* #floting-contacts div{ */
+    /* margin-left: 5px; */
+  /* } */
+  /* .svg-container{ */
+    /* width: 200%; */
+  /* } */
+/* } */
 
 
 header {
   padding-top: 100px;
+  /* padding-bottom: 20px; */
 }
 section{
   padding-top: 100px;
@@ -141,71 +121,53 @@ header h2{
   text-shadow:1px 1px 2px rgba(255, 255, 255, 0.274);
 }
 .cta{
-  background-color: #dd781e;
+  background-color: #cca018;
+  box-shadow: 1px 1px 5px whitesmoke;
 }
 .cta:hover{
-  background-color: rgba(160, 137, 10, 0.747);
+  background-color: #de781fa6;
+  box-shadow: 0px 0px 10px whitesmoke;
 }
-#header-right {
+#header-left {
+  min-height: 200px;
   border: 15px solid ;
   border-color: #de781fa6;
+  /* margin-right: 50px; */
   background-image: url("./images/black\ car\ Photo\ by\ a\ href=httpsunsplash.com@mohit445utm_content=creditCopyText&utm_medium=referral&utm_source=unsplashmohit\ suthara\ on\ a\ href=httpsunsplash.comphotosgray-car-HTGczLjKhsEutm_content=creditC.webp");
   background-size: cover;
-  position: relative;
+  /* position: relative; */
   border-radius:0 30%;
   
 }
-
-#header-right #light{
+.col-centered{
+  margin: auto;
+}
+.city{
+  /* height: 250px; */
+  /* width: 300px; */
+  background: #cca018;
+  box-shadow: 0px 3px 6px rgb(197, 138, 86);
+  position: relative;
+  margin:10px;
+  padding:10px 5px 10px 10px;
+  font-weight: 700;
+  /* text-align: center; */
+  border-radius: 20px 0 0 0px;
+}
+ .city::after{
+  content: "";
+  height: 115%;
+  width: 13%;
   position: absolute;
-  border-style:  solid ;
-  
-  border-radius:10% 50%;
-  top: 464px;
-  left: 218px;
-  width: 20px;
-  height: 50px;
-  background-color: #cefafc;
-  transform: rotate(75deg);
-  /* transition: background-color 2s; */
-  animation: light-on 1s ease-out infinite forwards;
-}
+  background: #212529;
+  border-radius: 50%;
+  right: -8%;
+  top: 0%;
+  transition: all 0.8s;
+ }  
 
-@keyframes light-on { 
-  0%{
-    background-color: #f09826;
-  }
-  50%{
-    background-color: #241706;
-  }
-  100%{
-    background-color: #f09826;
-  }
-  
-}
-.city-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.center-city {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
 
-.destination-cities {
-  display: flex;
-}
-
-.destination-city {
-  padding: 10px 20px;
-  margin: 10px 10px;
-  /* width: 100%; */
-  background-color: #f0f0f0;
-  border-radius: 5px;
-}
 
 .vehicle-models{
  /* width: inherit;  */
@@ -217,7 +179,8 @@ header h2{
 .vehicle-col{
   display: flex;
   flex-direction: column;
-  /* justify-items:flex-end; */
+  justify-items:flex-end;
+  /* height: ; */
 }
 .vehicle-col img {
   align-self: center;
@@ -227,31 +190,4 @@ header h2{
 }
 
 
-@media (max-width: 425px) {
-  #home {
-    padding-top: 4rem;
-  }
-  #dl-nav {
-    display: none;
-  }
-  #dl-head {
-    display: inline-block;
-  }
-  header {
-    background-position: center top;
-    background-size: 33%;
-  }
-  #header-text {
-    padding-bottom: 15px;
-  }
-  .card-deck {
-    width: 100%;
-    justify-content: center !important;
-  }
-  .carousel-item img {
-    width: 75% !important;
-  }
-  #membership-image img {
-    width: 100px;
-  }
-}
+
